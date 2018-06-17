@@ -1,11 +1,12 @@
 package main
+
 import (
-	"fmt"
 	"bufio"
-	"os"
+	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
-	"io/ioutil"
+	"os"
 	"regexp"
 )
 
@@ -21,9 +22,9 @@ func ReadConfig() {
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	scanner.Scan()
-	account = scanner.Text();
+	account = scanner.Text()
 	scanner.Scan()
-	password = scanner.Text();
+	password = scanner.Text()
 }
 
 func main() {
